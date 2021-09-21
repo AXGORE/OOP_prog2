@@ -20,21 +20,21 @@ namespace p2 {
 		Nefr() { r = 0; };
 		void Set_R(double a) { r = a; }
 		double S() {
-			return r*6*r*M_PI;
+			return r*6*r*M_PI;  //task 5
 		}
 		double L() {
-			return 12 * r;
+			return 12 * r; // task 3
 		}
 		double Rad(double t) {
-			return abs((3 * r / 2) * sin(t));
+			return abs((3 * r / 2) * sin(t)); // task 4
 		}
 		double X(double t) {
-			return (3 * r / 2) * cos(t) - (r / 2) * cos(3 * t);
+			return (3 * r / 2) * cos(t) - (r / 2) * cos(3 * t);  // task 6
 		}
 		double Y(double t) {
 			return (3 * r / 2) * sin(t) - (r / 2) * sin(3 * t);
 		}
-		void form() {
+		void form() { // task 7
 			const char* help = "(x^2 + y^2 - )^3 = *y^2";
 			double a = r / 2;
 			int len = strlen(help);
