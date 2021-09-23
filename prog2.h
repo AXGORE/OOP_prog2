@@ -51,7 +51,7 @@ namespace p2 {
 		double Y(double t) const {
 			return (3 * r / 2) * sin(t) - (r / 2) * sin(3 * t);
 		}
-		void form() const { // task 7
+		char* form() const { // task 7
 			const char* help = "(x^2 + y^2 - )^3 = *y^2";
 			double a = r / 2;
 			int len = strlen(help)+1;
@@ -60,11 +60,9 @@ namespace p2 {
 			len += strlen(num);
 			sprintf(num, "%.2f", 108*a*a*a*a);
 			len += strlen(num);
-			
 			char* str = new char[len];
 			sprintf(str,"%s%.2f%s%.2f%s","(x^2 + y^2 - ",r*r,")^3 = ",108*a*a*a*a,"*y^2");
-			std::cout << "\n" << str << std::endl;
-			delete[] str;
+			return str;
 		}
 	};
 	int coords(double t, double& x, double& y, Nefr a);

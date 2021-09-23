@@ -79,7 +79,9 @@ namespace p2 {
 			return;
 		}
 		else if (num == 6) { 
-			nefr.form();
+			char* str = nefr.form();
+			std::cout << "\n" << str << std::endl;
+			delete[] str;
 			return; }
 		else if (num == 7) { return; }
 	}
