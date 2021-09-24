@@ -15,11 +15,13 @@ namespace p2 {
 		}
 		std::cout << "Choose one option" << std::endl;
 		help=getNum(a,"int");
+		if (help == -1) { return 7; }
 		if ((a < 1 || a>7)) {
 			std::cout << "Error, try again" << std::endl;
 		}
 		while (a < 1 || a>7) {
 			help=getNum(a,"int");
+			if (help == -1) { return 7; }
 			if ((a < 1 && a>7)) {
 				std::cout << "Error, try again" << std::endl;
 			}
@@ -27,6 +29,7 @@ namespace p2 {
 		if (a == 1) {
 			std::cout << "enter radius" << std::endl;
 			help = getNum(r,"double");
+			if (r < 0) { r = abs(r); }
 			if (help == -1) { return 7; }
 			return a;
 		}
